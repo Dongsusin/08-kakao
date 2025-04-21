@@ -37,7 +37,6 @@ function App() {
       slideWidth = window.innerWidth,
       prevBtn = document.querySelector(".prev"),
       nextBtn = document.querySelector(".next");
-    makeClone();
     function makeClone() {
       for (let i = 0; i < slideCount; i++) {
         let cloneSlide = slide[i].cloneNode(true);
@@ -67,9 +66,11 @@ function App() {
     }
     nextBtn.addEventListener("click", function () {
       moveSlide(currentIdx + 1);
+      makeClone();
     });
     prevBtn.addEventListener("click", function () {
       moveSlide(currentIdx - 1);
+      makeClone();
     });
     function moveSlide(num) {
       slides.style.left = -num * slideWidth + "px";
