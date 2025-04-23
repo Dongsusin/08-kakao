@@ -38,12 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     popup.innerHTML = `
             <p>본 사이트는 상업적 이용을 목적으로 한 것이 아니며,<br> 순수하게 포트폴리오 용도로 제작된 것입니다.</p>
-            <div style="display: flex; justify-content: center; align-items: center;  margin-top: 4px;">
+            <div style="display: flex; justify-content: center; align-items: center;  margin-top: 4px; flex-direction: column;">
               <label style="display: block; cursor: pointer; width: 100%;">
                 <input type="checkbox" style="margin-right: 5px;" id="noShowToday">
                   오늘 다시 보지 않기
               </label>
-              <br>
               <button style="
                   margin-left: 12px; padding: 4px 12px; border-radius: 4px; border: none;
                   background-color: #333; color: white; cursor: pointer;
