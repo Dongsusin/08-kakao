@@ -34,7 +34,7 @@ header {
   border-bottom-color: transparent;
   z-index: 500;
   transition: all 1s;
-  background-color: #fff;
+  background-color: transparent;
   .container {
     height: 72px;
     display: flex;
@@ -65,7 +65,7 @@ header {
     height: 72px;
     font-size: 15px;
     font-weight: 600;
-    color: gray;
+    color: white;
     cursor: pointer;
   }
   .career {
@@ -73,7 +73,7 @@ header {
     font-size: 15px;
     line-height: 72px;
     font-weight: 600;
-    color: gray;
+    color: white;
     text-wrap: nowrap;
   }
   .container .career:hover {
@@ -91,8 +91,14 @@ header {
     color: #000;
   }
 }
-.nav-up {
-  top: -72px;
+.scrolled {
+  background-color: white;
+  nav ul li {
+    color: gray;
+  }
+  .career {
+    color: gray;
+  }
 }
 /*visual*/
 #visual {

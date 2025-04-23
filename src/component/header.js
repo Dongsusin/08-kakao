@@ -1,9 +1,25 @@
 import logo from "../image/header-logo.png";
 import menu from "../image/header-menu.png";
+import React, { useEffect, useState } from "react";
 
 export const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    //스크롤시 배경색 변경
+    const onScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    //스크롤 이벤트 리스너 등록
+    window.addEventListener("scroll", onScroll);
+    //스크롤 이벤트 리스너 해제
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <header>
+    <header className={scrolled ? "header scrolled" : "header"}>
       <div className="container">
         <h1 className="logo">
           <a href="/03.kakao/kakao.html">
