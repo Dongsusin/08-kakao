@@ -1,5 +1,4 @@
 import logo from "../image/header-logo.png";
-import menu from "../image/header-menu.png";
 import React, { useEffect, useState } from "react";
 
 export const Header = () => {
