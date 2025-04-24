@@ -36,9 +36,6 @@ export const Header = () => {
         <a className="career" href="https://careers.kakaoenterprise.com/intro">
           <span>인재영입</span>
         </a>
-        <a className="menu" href="/03.kakao/kakao.html">
-          <img alt="" src={menu} />
-        </a>
       </div>
     </header>
   );
